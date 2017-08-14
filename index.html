@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
-
+		<link href="assets/css/style.css" rel='stylesheet'>
 		<title>Trivia</title>
 	</head>
 	<body>
@@ -11,13 +11,33 @@
 				<h1>Trivia</h1>
 			</div>
 			<div class='row'></div> <!-- Spacer row? -->
-			<div class='row'>
-				<p>Time Remaining:</p> <!-- Start game / Timer -->
+			
+			<div class='row col-md-4 col-md-offset-4' id='splash'>
+				<h1>splash</h1>
 			</div>
-			<div class='row'> <!-- Questions / Results -->
-				
+
+			<div class='main-content hidden'>
+				<div class='row'>
+						<p>Time Remaining: <div class='timer'></div></p> <!-- Start game / Timer -->
+				</div>
+				<div class='row'> <!-- Questions / Results -->
+					<p class='question'>Question will go here</p>
+				</div>
+				<div class='row'>
+					<p>
+						<ul>
+							<li class='answer' id='answer-1'>1</li>
+							<li class='answer' id='answer-2'>2</li>
+							<li class='answer' id='answer-3'>3</li>
+							<li class='answer' id='answer-4'>4</li>
+						</ul>
+					</p>
+				</div>
 			</div>
 		</div>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="assets/javascript/app.js"></script>
 	</body>
 </html>
