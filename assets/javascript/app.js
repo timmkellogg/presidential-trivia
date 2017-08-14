@@ -28,6 +28,7 @@ var questionArray = [
 
 ]
 var questionCounter = 0;
+
 var secondsLeft = 5;
 
 var setQuestion = function(){
@@ -41,15 +42,15 @@ var setQuestion = function(){
 var questionTimer = function(){
 	console.log('!')
 	secondsleft = 5;
-	intervalId = setInterval(decrement, 1000);
+	intervalId = setInterval(decrementThirty, 1000);
 }
 
 var postTimer = function(){
 	secondsLeft = 5;
-	intervalId = setInterval(decrement2, 1000);
+	intervalId = setInterval(decrementFive, 1000);
 }
 
-var decrement = function(){
+var decrementThirty = function(){
 	secondsLeft--; 
 
 	$('.timer').text(secondsLeft);
@@ -62,8 +63,9 @@ var decrement = function(){
 	}
 }
 
-var decrement2 = function(){
+var decrementFive = function(){
 	secondsLeft--;
+
 
 	if(secondsLeft === 0){
 		stop();
