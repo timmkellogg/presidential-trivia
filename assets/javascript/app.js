@@ -39,6 +39,8 @@ var setQuestion = function(){
 }
 
 var questionTimer = function(){
+	console.log('!')
+	secondsleft = 5;
 	intervalId = setInterval(decrement, 1000);
 }
 
@@ -49,11 +51,13 @@ var postTimer = function(){
 
 var decrement = function(){
 	secondsLeft--; 
+
 	$('.timer').text(secondsLeft);
 
 	if(secondsLeft === 0){
-		clearInterval(intervalId);
+		stop();
 		$('.timer').text('Outta Time!');
+		postTimer();
 
 	}
 }
@@ -62,14 +66,14 @@ var decrement2 = function(){
 	secondsLeft--;
 
 	if(secondsLeft === 0){
-		clearInterval(intervalId);
+		stop();
 		questionCounter++;
 		runGame();
 	}
 }
 
 var stop = function(){
-
+	 clearInterval(intervalId);
 }
 
 var runGame = function(){
