@@ -100,10 +100,12 @@ var questionArray = [
 var questionCounter = 0;
 var wins = 0;
 var losses = 0;
+var notAnswered = 0;
 
 var endGame = function(){
 	$('.wins').text(wins);
 	$('.losses').text(losses);
+	$('.not-answered').text(notAnswered);
 	$('.main-content').addClass('hidden');
 	$('.scorescreen').removeClass('hidden');
 }
@@ -145,7 +147,7 @@ var decrementThirty = function(){
 	$('.timer').text(secondsLeft);
 	if(secondsLeft === 0){
 		stop();
-		losses++;
+		notAnswered++;
 		
 		$('.answer').prop('disabled', true);
 
@@ -204,6 +206,7 @@ $('.replay').on('click', function(){
 	questionCounter = 0;
 	wins = 0;
 	losses = 0;
+	notAnswered = 0;
 
 	$('.scorescreen').addClass('hidden');
 	$('.main-content').removeClass('hidden');

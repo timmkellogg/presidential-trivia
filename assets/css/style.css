@@ -28,8 +28,13 @@ body {
 
 #splash {
 	background-color: #444;
-	color: #FFF;
+	color: #DDD;
 	margin-top: 5%;
+}
+
+.replay {
+	background-color: #444;
+	color: #DDD;
 }
 
 ul {
@@ -45,11 +50,20 @@ button {
 
 }
 
+.answer:hover {
+	border-style: solid;
+}
+
 .right-answer {
 	background-color: #008000;
+	color: #DDD;
 }
 
 .wrong-answer {
 	background-color: #DC143C;
-	color: #000000;
+	color: #DDD;
+}
+
+.funFact {
+	font-style: italic;
 }
