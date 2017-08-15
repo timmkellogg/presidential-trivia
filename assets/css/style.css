@@ -1,3 +1,31 @@
+body {
+	background-image: url("../images/background.jpg");
+}
+
+.container {
+	background-color: white;
+	padding-bottom: 5%;
+	background-image: url("../images/paper.jpg");
+	background-size: cover;
+}
+
+.col-md-8, .question, .time{
+	font-size: 24px;
+}
+
+.timer{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.jumbotron {
+	padding-top: .5%;
+	background-image: url('../images/banner.png');
+	background-size: cover;
+	color: white;
+	text-shadow: 5px 5px #000000;
+}
+
 #splash {
 	background-color: #444;
 	color: #FFF;
@@ -9,10 +37,19 @@ ul {
 	padding: 0%;
 }
 
+button {
+	background-color: transparent;
+	border: none;
+	padding: 1% 0 1% 0;
+	width: 50%;
+
+}
+
 .right-answer {
-	background-color: green;
+	background-color: #008000;
 }
 
 .wrong-answer {
-	background-color: red;
+	background-color: #DC143C;
+	color: #000000;
 }

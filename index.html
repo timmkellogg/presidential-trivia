@@ -3,37 +3,49 @@
 	<head>
 		<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'>
 		<link href="assets/css/style.css" rel='stylesheet'>
-		<title>Trivia</title>
+		<title>Presidential Trivia</title>
 	</head>
 	<body>
 		<div class='container text-center'>
 			<div class='row'>
-				<h1>Trivia</h1>
+				<div class='jumbotron'>
+					<h1>Presidential Trivia</h1>
+				</div>
 			</div>
-			<div class='row'></div> <!-- Spacer row? -->
-			
 			<div class='row col-md-4 col-md-offset-4' id='splash'>
-				<h1>splash</h1>
+				<h1>Start</h1>
 			</div>
-
+			
 			<div class='main-content hidden'>
 				<div class='row'>
-						<p>Time Remaining: <div class='timer'></div></p> <!-- Start game / Timer -->
+						<p class='time'>Time Remaining: <div class='timer'></div></p> <!-- Start game / Timer -->
 				</div>
 				<div class='row'> <!-- Questions / Results -->
 					<p class='question'>Question will go here</p>
 				</div>
 				<div class='row'>
-					<p>
-						<ul>
-							<li class='answer' id='answer-1'>1</li>
-							<li class='answer' id='answer-2'>2</li>
-							<li class='answer' id='answer-3'>3</li>
-							<li class='answer' id='answer-4'>4</li>
-						</ul>
-					</p>
+					<div class='col-md-8 col-md-offset-2'>
+						<button type='button' class='answer' id='answer-1'></button><br>
+						<button type='button' class='answer' id='answer-2'></button><br>
+						<button type='button' class='answer' id='answer-3'></button><br>
+						<button type='button' class='answer' id='answer-4'></button><br>
+						
+						<br>
+						<p class='funFact'></p>
+					</div>
 				</div>
 			</div>
+
+			<div class='scorescreen hidden'>
+				<div class='row'>
+					<div class='col-md-8 col-md-offset-2'>
+						<h1>Correct:<div class='wins'></div></h1>
+						<h1>Incorrect:<div class='losses'></div></h1>
+						<button type='button' class='replay'>Play again?</button>
+					</div>
+				</div>
+			</div>
+
 		</div>
 
 
