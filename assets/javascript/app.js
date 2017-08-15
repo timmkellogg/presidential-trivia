@@ -22,14 +22,6 @@ var questionArray = [
 				  only president to serve more than two terms; he died shortly into his fourth term in 1945.'
 	},
 	{
-		question: 'Who was the only President to serve two non-consecutive terms?',
-		answers: ['Woodrow Wilson', 'Ronald Reagan', 'Theodore Roosevelt', 'Grover Cleveland'],
-		answerPosition: '#answer-4',
-		correctAnswer: 'Grover Cleveland',
-		funFact: 'Grover Cleveland served two non-consecutive terms and is counted chronologically as both the \
-				  twenty-second and the twenty-fourth president.'
-	},
-	{
 		question: 'Who was the oldest elected President?',
 		answers: ['Dwight D. Eisenhower', 'James Buchanan', 'Donald Trump', 'Ronald Reagan'],
 		answerPosition: '#answer-3',
@@ -51,6 +43,14 @@ var questionArray = [
 		funFact: 'Barack Obama was born in Honolulu, Hawaii, to Stanley Ann Dunham, an American of predominantly \
 				  English descent from Wichita, Kansas, and Barack Obama, Sr., a Luo from Nyang\'oma Kogelo, Nyanza \
 				  Providence, Kenya Colony. Obama is the first president to have been born in Hawaii.'
+	},
+	{
+		question: 'Who was the only President to serve two non-consecutive terms?',
+		answers: ['Woodrow Wilson', 'Ronald Reagan', 'Theodore Roosevelt', 'Grover Cleveland'],
+		answerPosition: '#answer-4',
+		correctAnswer: 'Grover Cleveland',
+		funFact: 'Grover Cleveland served two non-consecutive terms and is counted chronologically as both the \
+				  twenty-second and the twenty-fourth president.'
 	},
 	{
 		question: 'Walt Whitman\'s poem "Oh Captain, My Captain" was written about which President?',
