@@ -17,19 +17,25 @@ var questionArray = [
 		name: 'sample',
 		question: 'Which number is greatest?',
 		answers: ['4', '10', '7', '2'],
-		correctAnswer: '10'
+		correctAnswer: '#answer-2' //answers-2
 	},
 	{
 		name: 'sample2',
 		question: 'this is the question too?',
 		answers: ['answer 1', 'answer 2', 'answer 3', 'answer 4'],
-		correctAnswer: 'answer 3'
+		correctAnswer: '#answer 3'
 	}
 
 ]
 var questionCounter = 0;
 
 var secondsLeft = 5;
+
+var stop = function(){
+	 clearInterval(intervalId);
+}
+
+
 
 var setQuestion = function(){
 	$('.question').text(questionArray[questionCounter].question);
@@ -41,8 +47,17 @@ var setQuestion = function(){
 
 var questionTimer = function(){
 	console.log('!')
-	secondsleft = 5;
+	secondsLeft = 5;
+	console.log(secondsLeft);
 	intervalId = setInterval(decrementThirty, 1000);
+}
+
+//end game function
+
+var runGame = function(){
+	setQuestion();
+	questionTimer();
+	//start taking input
 }
 
 var postTimer = function(){
@@ -58,6 +73,7 @@ var decrementThirty = function(){
 	if(secondsLeft === 0){
 		stop();
 		$('.timer').text('Outta Time!');
+		//stop taking input
 		postTimer();
 
 	}
@@ -70,18 +86,15 @@ var decrementFive = function(){
 	if(secondsLeft === 0){
 		stop();
 		questionCounter++;
+		if((questionCounter - 1) === questionArray.length){
+			//end game
+			$(questionArray.correctAnswer)
+		}
 		runGame();
 	}
 }
 
-var stop = function(){
-	 clearInterval(intervalId);
-}
 
-var runGame = function(){
-	setQuestion();
-	questionTimer();
-}
 
 $('#splash').on('click', function(){ // Removes splash screen, runs startGame function
 	$('#splash').addClass('hidden');
@@ -90,7 +103,18 @@ $('#splash').on('click', function(){ // Removes splash screen, runs startGame fu
 })
 
 $('.answer').on('click', function(){
-	if (this.innerHTML === questionArray[questionCounter].correctAnswer){
-		$(this).addClass('right-answer');
+
+	//highlight correct answer
+	//stop taking input
+	for(var i = 0; i < questionArray[questionCounter].answers.length; i++){
+		if(questionArray[questionCounter].answers[i] === questionArray[questionCounter].correctAnswer){
+			//??
+		}
 	}
+
+	if (this.innerHTML !== questionArray[questionCounter].correctAnswer){
+		$(this).addClass('wrong-answer');
+	
+	}
+	$(questionArray[questionCounter].correctAnswer).addClass('right-answer').removeClass('wrong-answer');
 })
