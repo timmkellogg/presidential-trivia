@@ -149,6 +149,8 @@ var decrementThirty = function(){
 		stop();
 		notAnswered++;
 		
+		$(questionArray[questionCounter].answerPosition).addClass('right-answer').removeClass('wrong-answer');
+
 		$('.answer').prop('disabled', true);
 
 		$('.timer').text('Outta Time!');
